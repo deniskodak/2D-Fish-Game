@@ -63,7 +63,9 @@ export default class Player implements BaseCanvasClass {
         // change row in sprite to update player canvas element
         this.frameY = 1;
         // increase ammo filling
-        this.game.ammo += 0.1;
+        if (this.game.ammo < this.game.ammoMaxLimit) {
+          this.game.ammo += 0.1;
+        }
       } else {
         // reset power timer
         this.powerTimer = 0;
