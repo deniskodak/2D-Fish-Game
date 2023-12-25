@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- dialog -->
+    <dialog open id="welcome-dialog" class="welcome-dialog">
+      <h1 class="game-font">Welcome to 2D Fish game</h1>
+      <hr class="divider" />
+      <strong class="dialog-text"
+        >Your goal in the game is to score 80 points before the game time
+        ends.</strong
+      >
+      <p class="dialog-text">Game time - 30 seconds.</p>
+      <p class="dialog-text">
+        Points are given for destroying enemy. Each enemy has a different
+        number of lives and points, some of them has hidden properties.
+      </p>
+      <p>
+        To move the main character use <b>Arrow up</b> or <b>Arrow down</b> keys - 
+        <img class="key" height="20" width="30" src="assets/arrowupkey.png"></img> 
+        <img class="key" height="20" width="30" src="assets/arrowdownkey.png"></img>. 
+      </p>
+      <p>To shoot use the
+        <b>Spacebar</b> key - <img class="key" height="20" width="30" src="assets/spacekey.png"></img></p>
+        <hr class="divider" />
+        <button class="start-game game-font" id="start-game">Start game</button>
+    </dialog>
+
+    <!-- main animation -->
+    <canvas id="canvas1"></canvas>
+
+    <!-- creatures -->
+    <img
+      class="hidden"
+      id="player"
+      src="assets/player/player.png"
+      alt="player creature"
+    />
+
+    <img
+      class="hidden"
+      id="angler1"
+      src="assets/enemy/angler1.png"
+      alt="enemy angler1 creature"
+    />
+    <img
+      class="hidden"
+      id="angler2"
+      src="assets/enemy/angler2.png"
+      alt="enemy angler2 creature"
+    />
+    <img
+      class="hidden"
+      id="lucky"
+      src="assets/enemy/lucky.png"
+      alt="enemy lucky creature"
+    />
+    <img
+      class="hidden"
+      id="whale"
+      src="assets/enemy/hivewhale.png"
+      alt="enemy whale creature"
+    />
+    <img
+      class="hidden"
+      id="drone"
+      src="assets/enemy/drone.png"
+      alt="enemy drone creature"
+    />
+    <img
+      class="hidden"
+      id="bulbwhale"
+      src="assets/enemy/bulbwhale.png"
+      alt="enemy bulb whale creature"
+    />
+    <img
+      class="hidden"
+      id="moonfish"
+      src="assets/enemy/moonfish.png"
+      alt="enemy moonfish creature"
+    />
+    <img
+      class="hidden"
+      id="stalker"
+      src="assets/enemy/stalker.png"
+      alt="enemy stalker creature"
+    />
+    <img
+      class="hidden"
+      id="razorfin"
+      src="assets/enemy/razorfin.png"
+      alt="enemy razorfin creature"
+    />
+
+    <!-- bullets -->
+
+    <img
+      class="hidden"
+      id="fireball"
+      src="assets/bullet/fireball.png"
+      alt="fire bullet"
+    />
+
+    <!-- creatures parts -->
+
+    <img
+      class="hidden"
+      id="gears"
+      src="assets/gears/gears.png"
+      alt="broken gears"
+    />
+    <img
+      class="hidden"
+      id="smoke"
+      src="assets/effects/smokeExplosion.png"
+      alt="smoke explosion"
+    />
+    <img
+      class="hidden"
+      id="fire"
+      src="assets/effects/fireExplosion.png"
+      alt="fire explosion"
+    />
+    <img
+      class="hidden"
+      id="shield"
+      src="assets/shield/shield.png"
+      alt="shield"
+    />
+
+    <!-- background -->
+
+    <img
+      class="hidden"
+      id="layer1"
+      src="assets/layer/layer1.png"
+      alt="game clouds background"
+    />
+    <img
+      class="hidden"
+      id="layer2"
+      src="assets/layer/layer2.png"
+      alt="game city background"
+    />
+    <img
+      class="hidden"
+      id="layer3"
+      src="assets/layer/layer3.png"
+      alt="game street background"
+    />
+    <img
+      class="hidden"
+      id="layer4"
+      src="assets/layer/layer4.png"
+      alt="game parts background"
+    />
+
+    <!-- sounds -->
+    <audio id="powerUpSound" src="assets/sounds/powerup.wav"></audio>
+    <audio id="powerDownSound" src="assets/sounds/powerdown.wav"></audio>
+    <audio id="shotSound" src="assets/sounds/shot.wav"></audio>
+    <audio id="hitSound" src="assets/sounds/hit.wav"></audio>
+    <audio id="explosionSound" src="assets/sounds/explosion.wav"></audio>
+    <audio id="shieldSound" src="assets/sounds/shield.wav"></audio>
+  </body>
+</html>
