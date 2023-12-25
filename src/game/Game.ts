@@ -288,7 +288,6 @@ export default class Game {
   updateEnemyTimer(deltaTimeStamp: number): void {
     if (this.enemyTimer > this.enemyInterval) {
       this.enemyTimer = 0;
-      console.log('here')
       if (!this.gameOver) this.addEnemy();
     } else {
       this.enemyTimer += deltaTimeStamp;
@@ -312,7 +311,6 @@ export default class Game {
     else enemy = new LuckyFish(this);
 
     this.enemies.push(enemy);
-    console.log(this.enemies, 'enemies')
   }
 
   /**

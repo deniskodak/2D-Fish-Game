@@ -6,24 +6,23 @@ window.addEventListener("load", () => {
   const welcomeDialog = document.getElementById(
     "welcome-dialog",
   ) as HTMLDialogElement;
-  // root canvas element
-  const canvas = document.getElementById("canvas1") as HTMLCanvasElement;
-  // root canvas context
-  const canvasContext = canvas.getContext("2d") as CanvasRenderingContext2D;
-  // game board width
-  canvas.width = 1000;
-  // game board height
-  canvas.height = 500;
 
-  startGameButton.addEventListener("click", () => {
+  startGameButton.addEventListener("click", (event: MouseEvent) => {
     welcomeDialog.open = false;
-    canvas.style.opacity = '1';
+    // root canvas element
+    const canvas = document.getElementById("canvas1") as HTMLCanvasElement;
+    // root canvas context
+    const canvasContext = canvas.getContext("2d") as CanvasRenderingContext2D;
+    // game board width
+    canvas.width = 1000;
+    // game board height
+    canvas.height = 500;
+    canvas.style.opacity = "1";
 
     const game = new Game(canvas.width, canvas.height);
 
     // stores last animation timestamp
-    let lastTimeStamp = 0;
-
+    let lastTimeStamp = event.timeStamp;
     /**
      * Trigger infinite animation loop
      */
